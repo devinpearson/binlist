@@ -71,9 +71,9 @@ class BinList
             $result->scheme ?? '',
             $result->type ?? '',
             $result->brand ?? '',
-            $result->prepaid ?? '',
-            $country ?? '',
-            $bank ?? ''
+            $result->prepaid ?? false,
+            $country,
+            $bank
         );
 
         return $binResult;
