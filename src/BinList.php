@@ -43,9 +43,29 @@ class BinList
    private function formatResponse($json)
    {
        $result = json_decode($json);
-       $bank = new BinBank($result->bank->name, $result->bank->url, $result->bank->phone, $result->bank->city);
-       $country = new BinCountry($result->country->numeric, $result->country->alpha2, $result->country->name, $result->country->emoji, $result->country->currency, $result->country->latitude, $result->country->longitude);
-       $binResult = new BinResult($result->scheme, $result->type, $result->brand, $result->prepaid, $country, $bank);
+       $bank = new BinBank(
+           $result->bank->name ?? '',
+           $result->bank->url ?? '',
+           $result->bank->phone ?? '',
+           $result->bank->city ?? ''
+       );
+       $country = new BinCountry(
+           $result->country->numeric ?? '',
+           $result->country->alpha2 ?? '',
+           $result->country->name ?? '',
+           $result->country->emoji ?? '',
+           $result->country->currency ?? '',
+           $result->country->latitude ?? 0,
+           $result->country->longitude ?? 0
+       );
+       $binResult = new BinResult(
+           $result->scheme ?? '',
+           $result->type ?? '',
+           $result->brand ?? '',
+           $result->prepaid ?? '',
+           $country ?? '',
+           $bank ?? ''
+       );
        return $binResult;
    }
 }
