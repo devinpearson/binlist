@@ -2,8 +2,8 @@
 
 namespace DevinPearson\Tests\BinList;
 
-use GrahamCampbell\TestBenchCore\ServiceProviderTrait;
 use DevinPearson\BinList\BinList;
+use GrahamCampbell\TestBenchCore\ServiceProviderTrait;
 
 /**
  * This is the service provider test class.
