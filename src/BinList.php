@@ -15,9 +15,12 @@ class BinList
     /** @var BinListConnector $connector handling the calls to binlist */
     private $connector;
 
-    public function __construct()
+    public function __construct($connector = null)
     {
-        $this->connector = new BinListConnector();
+        if (!$connector instanceof BinListConnector) {
+            $connector = new BinListConnector();
+        }
+        $this->connector = $connector;
     }
 
     /**
