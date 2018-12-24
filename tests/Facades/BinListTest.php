@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace DevinPearson\Tests\BinList\Facades;
 
-use GrahamCampbell\TestBenchCore\FacadeTrait;
-use DevinPearson\BinList\Facades\BinList as BinListFacade;
 use DevinPearson\BinList\BinList;
+use DevinPearson\BinList\Facades\BinList as BinListFacade;
 use DevinPearson\Tests\BinList\AbstractTestCase;
+use GrahamCampbell\TestBenchCore\FacadeTrait;
 
 /**
  * This is the SwapShop facade test class.
