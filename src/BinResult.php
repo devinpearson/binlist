@@ -8,21 +8,33 @@ namespace DevinPearson\BinList;
  *  The bin object
  *  provides the results of the bin search
  *
- *  @author Devin Pearson
+ * @author Devin Pearson
  */
 class BinResult
 {
-    /** @var string Name of the scheme provider visa, mastercard */
+    /**
+     * @var string Name of the scheme provider visa, mastercard 
+     */
     public $scheme = '';
-    /** @var string debit or credit */
+    /**
+     * @var string debit or credit 
+     */
     public $type = '';
-    /** @var string Brand of card */
+    /**
+     * @var string Brand of card 
+     */
     public $brand = '';
-    /** @var bool whether the card is prepaid or not */
+    /**
+     * @var bool whether the card is prepaid or not 
+     */
     public $prepaid = false;
-    /** @var BinCountry the country associated with the bin number */
+    /**
+     * @var BinCountry the country associated with the bin number 
+     */
     public $country;
-    /** @var BinBank the bank associated with the bin number */
+    /**
+     * @var BinBank the bank associated with the bin number 
+     */
     public $bank;
 
     /**

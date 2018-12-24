@@ -8,11 +8,13 @@ namespace DevinPearson\BinList;
  *  Use this section to define what this class is doing, the PHPDocumentator will use this
  *  to automatically generate an API documentation using this information.
  *
- *  @author Devin Pearson
+ * @author Devin Pearson
  */
 class BinList
 {
-    /** @var BinListConnector $connector handling the calls to binlist */
+    /**
+     * @var BinListConnector $connector handling the calls to binlist 
+     */
     private $connector;
 
     public function __construct($connector = null)
@@ -51,28 +53,28 @@ class BinList
     {
         $result = json_decode($json);
         $bank = new BinBank(
-           $result->bank->name ?? '',
-           $result->bank->url ?? '',
-           $result->bank->phone ?? '',
-           $result->bank->city ?? ''
-       );
+            $result->bank->name ?? '',
+            $result->bank->url ?? '',
+            $result->bank->phone ?? '',
+            $result->bank->city ?? ''
+        );
         $country = new BinCountry(
-           $result->country->numeric ?? '',
-           $result->country->alpha2 ?? '',
-           $result->country->name ?? '',
-           $result->country->emoji ?? '',
-           $result->country->currency ?? '',
-           $result->country->latitude ?? 0,
-           $result->country->longitude ?? 0
-       );
+            $result->country->numeric ?? '',
+            $result->country->alpha2 ?? '',
+            $result->country->name ?? '',
+            $result->country->emoji ?? '',
+            $result->country->currency ?? '',
+            $result->country->latitude ?? 0,
+            $result->country->longitude ?? 0
+        );
         $binResult = new BinResult(
-           $result->scheme ?? '',
-           $result->type ?? '',
-           $result->brand ?? '',
-           $result->prepaid ?? '',
-           $country ?? '',
-           $bank ?? ''
-       );
+            $result->scheme ?? '',
+            $result->type ?? '',
+            $result->brand ?? '',
+            $result->prepaid ?? '',
+            $country ?? '',
+            $bank ?? ''
+        );
 
         return $binResult;
     }

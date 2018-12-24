@@ -26,9 +26,11 @@ class BinListServiceProvider extends ServiceProvider
      */
     protected function registerBindings(): void
     {
-        $this->app->singleton('binlist', function () {
-            return new BinList();
-        });
+        $this->app->singleton(
+            'binlist', function () {
+                return new BinList();
+            }
+        );
 
         $this->app->alias('binlist', BinList::class);
     }

@@ -9,7 +9,7 @@ use DevinPearson\BinList\BinList;
  *  For each class in your library, there should be a corresponding Unit-Test for it
  *  Unit-Tests should be as much as possible independent from other test going on.
  *
- *  @author yourname
+ * @author yourname
  */
 class BinListTest extends TestCase
 {
@@ -40,6 +40,6 @@ class BinListTest extends TestCase
         $connector->shouldReceive('check')->andReturn($json);
         $result = $binList->check("1111111");
         $this->assertTrue($result instanceof \DevinPearson\BinList\BinResult);
-	    unset($connector, $binList, $json, $result);
+        unset($connector, $binList, $json, $result);
     }
 }
