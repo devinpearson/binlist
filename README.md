@@ -7,6 +7,7 @@ BinList Composer Library
 [![composer.lock](https://poser.pugx.org/devinpearson/binlist/composerlock)](https://packagist.org/packages/devinpearson/binlist)
 [![Build Status](https://travis-ci.org/devinpearson/binlist.svg?branch=master)](https://travis-ci.org/devinpearson/binlist)
 [![StyleCI](https://github.styleci.io/repos/162976694/shield?branch=master)](https://github.styleci.io/repos/162976694)
+[![Coverage Status](https://coveralls.io/repos/github/devinpearson/binlist/badge.svg?branch=master)](https://coveralls.io/github/devinpearson/binlist?branch=master)
 
 
 Installing
