@@ -32,11 +32,11 @@ class BinListConnectorTest extends TestCase
             )
         );
         $binList = new BinListConnector(new Client(['handler' => $handler]));
-        $result = $binList->check("52662718");
+        $result = $binList->check('52662718');
         $this->assertJson($result);
 
         try {
-            $binList->check("1111111");
+            $binList->check('1111111');
         } catch (\DevinPearson\BinList\BinListException $exception) {
             $this->assertInstanceOf(\DevinPearson\BinList\BinListException::class, $exception);
             $this->assertEquals('bin not found', $exception->getMessage());

@@ -2,8 +2,8 @@
 
 namespace DevinPearson\Tests\BinList;
 
-use GrahamCampbell\TestBench\AbstractPackageTestCase;
 use DevinPearson\BinList\BinListServiceProvider;
+use GrahamCampbell\TestBench\AbstractPackageTestCase;
 
 /**
  * This is the abstract test class.
