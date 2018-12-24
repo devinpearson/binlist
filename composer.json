@@ -12,10 +12,29 @@
     "type": "project",
     "require": {
 		"php": ">=7.1",
-        "guzzlehttp/guzzle": "^6.3"
+        "guzzlehttp/guzzle": "^6.3",
+        "illuminate/contracts": "5.7.*",
+        "illuminate/support": "5.7.*"
     },
     "require-dev": {
+        "mockery/mockery": "^1.0",
 		"phpunit/phpunit": "^7.0"
+    },
+    "config": {
+        "preferred-install": "dist"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "5.1-dev"
+        },
+        "laravel": {
+            "providers": [
+                "DevinPearson\\BinList\\BinListServiceProvider"
+            ],
+            "aliases": {
+                "BinList": "DevinPearson\\BinList\\Facades\\BinList"
+            }
+        }
     },
     "autoload": {
         "psr-4": {
@@ -26,5 +45,7 @@
         "psr-4": {
             "DevinPearson\\Tests\\BinList\\": "tests/"
         }
-    }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
