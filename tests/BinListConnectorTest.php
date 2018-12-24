@@ -29,7 +29,7 @@ class BinListConnectorTest extends TestCase
                 new Response(200, [], $json),
                 new Response(404),
                 new Response(400),
-                new \GuzzleHttp\Exception\ConnectException("Error Communicating with Server", new \GuzzleHttp\Psr7\Request('GET', 'test')),
+                new \GuzzleHttp\Exception\ConnectException('Error Communicating with Server', new \GuzzleHttp\Psr7\Request('GET', 'test')),
                 new Response(500),
                 ]
             )
@@ -46,21 +46,21 @@ class BinListConnectorTest extends TestCase
         }
 
         try {
-            $binList->check("1111111");
+            $binList->check('1111111');
         } catch (\DevinPearson\BinList\BinListException $exception) {
             $this->assertInstanceOf(\DevinPearson\BinList\BinListException::class, $exception);
             $this->assertEquals('Client error: `GET https://lookup.binlist.net/1111111` resulted in a `400 Bad Request` response', $exception->getMessage());
         }
 
         try {
-            $binList->check("52662718");
+            $binList->check('52662718');
         } catch (\DevinPearson\BinList\BinListException $exception) {
             $this->assertInstanceOf(\DevinPearson\BinList\BinListException::class, $exception);
             $this->assertEquals('Error Communicating with Server', $exception->getMessage());
         }
 
         try {
-            $binList->check("52662718");
+            $binList->check('52662718');
         } catch (\DevinPearson\BinList\BinListException $exception) {
             $this->assertInstanceOf(\DevinPearson\BinList\BinListException::class, $exception);
             $this->assertEquals('Server error: `GET https://lookup.binlist.net/52662718` resulted in a `500 Internal Server Error` response', $exception->getMessage());
