@@ -1,7 +1,9 @@
-<?php namespace DevinPearson\BinList;
+<?php
+
+namespace DevinPearson\BinList;
 
 /**
- *  BinBank class
+ *  BinBank class.
  *
  *  The card issuers bank object
  *  provides the card issuers contact details
@@ -21,6 +23,7 @@ class BinBank
 
     /**
      * BinBank constructor.
+     *
      * @param string $name
      * @param string $url
      * @param string $phone

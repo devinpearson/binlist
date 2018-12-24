@@ -1,11 +1,13 @@
-<?php namespace DevinPearson\BinList;
+<?php
+
+namespace DevinPearson\BinList;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\ClientException;
 use GuzzleHttp\Exception\ConnectException;
 
 /**
- *  BinListConnector
+ *  BinListConnector.
  *
  *  connects to binlist and retrieves the result
  *
@@ -13,24 +15,24 @@ use GuzzleHttp\Exception\ConnectException;
  */
 class BinListConnector
 {
-    /**  @var Client $client guzzle client for calling the http requests */
+    /** @var Client $client guzzle client for calling the http requests */
     private $client;
 
     /**
      * BinListConnector constructor.
+     *
      * @param Client|null $client
      */
     public function __construct(Client $client = null)
     {
         $this->client = $client;
-        if (!$client instanceof Client)
-        {
+        if (!$client instanceof Client) {
             $this->client = new Client();
         }
     }
 
     /**
-     * Check Method
+     * Check Method.
      *
      * Fetches the bin number details from binlist.com
      *
@@ -46,10 +48,13 @@ class BinListConnector
     }
 
     /**
-     * Returns the json encoded result
+     * Returns the json encoded result.
+     *
      * @param $url
-     * @return string
+     *
      * @throws BinListException
+     *
+     * @return string
      */
     private function request($url)
     {
@@ -60,21 +65,20 @@ class BinListConnector
                 [
                     'headers' => [
                         'Accept-Version' => 3,
-                    ]
+                    ],
                 ]
             );
 
             return (string) $response->getBody();
-
         } catch (ConnectException $e) {
             throw new BinListException($e->getMessage());
         } catch (ClientException $e) {
             if ($e->getResponse()->getStatusCode() == '404') {
                 throw new BinListException('bin not found');
             }
+
             throw new BinListException($e->getMessage());
-        } catch (\GuzzleHttp\Exception\GuzzleException $e)
-        {
+        } catch (\GuzzleHttp\Exception\GuzzleException $e) {
             throw new BinListException($e->getMessage());
         }
     }

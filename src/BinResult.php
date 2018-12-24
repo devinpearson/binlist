@@ -1,7 +1,9 @@
-<?php namespace DevinPearson\BinList;
+<?php
+
+namespace DevinPearson\BinList;
 
 /**
- *  BinResult class
+ *  BinResult class.
  *
  *  The bin object
  *  provides the results of the bin search
@@ -16,7 +18,7 @@ class BinResult
     public $type = '';
     /** @var string Brand of card */
     public $brand = '';
-    /** @var boolean whether the card is prepaid or not */
+    /** @var bool whether the card is prepaid or not */
     public $prepaid = false;
     /** @var BinCountry the country associated with the bin number */
     public $country;
@@ -25,12 +27,13 @@ class BinResult
 
     /**
      * BinResult constructor.
-     * @param string $scheme
-     * @param string $type
-     * @param string $brand
-     * @param boolean $prepaid
+     *
+     * @param string     $scheme
+     * @param string     $type
+     * @param string     $brand
+     * @param bool       $prepaid
      * @param BinCountry $country
-     * @param BinBank $bank
+     * @param BinBank    $bank
      */
     public function __construct($scheme, $type, $brand, $prepaid, BinCountry $country, BinBank $bank)
     {
