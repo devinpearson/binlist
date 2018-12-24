@@ -1,0 +1,30 @@
+{
+    "name": "devinpearson/binlist",
+    "description": "Easy package for using binlist in laravel.",
+    "keywords": ["binlist", "laravel", "package"],
+    "license": "DBAD",
+    "authors": [
+        {
+            "name": "Devin Pearson",
+            "email": "devin@blackhat.co.za"
+        }
+    ],
+    "type": "project",
+    "require": {
+		"php": ">=7.1",
+        "guzzlehttp/guzzle": "^6.3"
+    },
+    "require-dev": {
+		"phpunit/phpunit": "^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "DevinPearson\\BinList\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "DevinPearson\\Tests\\BinList\\": "tests/"
+        }
+    }
+}
