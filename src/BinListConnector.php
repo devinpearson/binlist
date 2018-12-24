@@ -16,11 +16,11 @@ use GuzzleHttp\Exception\ConnectException;
 class BinListConnector
 {
     /**
-     * @var Client guzzle client for calling the http requests 
+     * @var Client guzzle client for calling the http requests
      */
     private $client;
     /**
-     * @var string the base url of the binlist api 
+     * @var string the base url of the binlist api
      */
     private $baseUrl = 'https://lookup.binlist.net/';
 

@@ -3,6 +3,7 @@
 use PHPUnit\Framework\TestCase;
 
 use DevinPearson\BinList\BinList;
+
 /**
  *  Corresponding Class to test YourClass class.
  *

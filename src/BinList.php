@@ -13,7 +13,7 @@ namespace DevinPearson\BinList;
 class BinList
 {
     /**
-     * @var BinListConnector $connector handling the calls to binlist 
+     * @var BinListConnector $connector handling the calls to binlist
      */
     private $connector;
 

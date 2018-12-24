@@ -13,19 +13,19 @@ namespace DevinPearson\BinList;
 class BinBank
 {
     /**
-     * @var string Name of the bank who issued the card number 
+     * @var string Name of the bank who issued the card number
      */
     public $name = '';
     /**
-     * @var string the banks web address 
+     * @var string the banks web address
      */
     public $url = '';
     /**
-     * @var string Card issuers contact number 
+     * @var string Card issuers contact number
      */
     public $phone = '';
     /**
-     * @var string the city the card issuer is located in 
+     * @var string the city the card issuer is located in
      */
     public $city = '';
 

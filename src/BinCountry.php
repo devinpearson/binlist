@@ -13,31 +13,31 @@ namespace DevinPearson\BinList;
 class BinCountry
 {
     /**
-     * @var string the country numeric code 
+     * @var string the country numeric code
      */
     public $numeric = '';
     /**
-     * @var string the 2 char country code 
+     * @var string the 2 char country code
      */
     public $alpha2 = '';
     /**
-     * @var string Country name 
+     * @var string Country name
      */
     public $name = '';
     /**
-     * @var string the country emoji flag 
+     * @var string the country emoji flag
      */
     public $emoji = '';
     /**
-     * @var string the currency code the card is denominated in 
+     * @var string the currency code the card is denominated in
      */
     public $currency = '';
     /**
-     * @var int the latitude of the issuing country 
+     * @var int the latitude of the issuing country
      */
     public $latitude = '';
     /**
-     * @var int the longitude of the issuing country 
+     * @var int the longitude of the issuing country
      */
     public $longitude = '';
 
