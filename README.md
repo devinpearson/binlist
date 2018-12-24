@@ -17,7 +17,29 @@ Add the dependency to your project:
 ```bash
 composer require devinpearson/binlist
 ```
+### Laravel 5.5+:
 
+If you don't use auto-discovery, add the ServiceProvider to the providers array in config/app.php
+
+```php
+DevinPearson\BinList\BinListServiceProvider::class,
+```
+
+If you want to use the facade to log messages, add this to your facades in app.php:
+
+```php
+'BinList' => DevinPearson\BinList\Facades\BinList::class,
+```
+
+## Usage
+
+```php
+try {
+    BinList::check($binNumber);
+} catch (\DevinPearson\BinList\BinListException $exception) {
+    // do something with exception
+}
+```
 Features
 --------
 

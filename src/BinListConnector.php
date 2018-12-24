@@ -15,8 +15,10 @@ use GuzzleHttp\Exception\ConnectException;
  */
 class BinListConnector
 {
-    /** @var Client $client guzzle client for calling the http requests */
+    /** @var Client guzzle client for calling the http requests */
     private $client;
+    /** @var string the base url of the binlist api */
+    private $baseUrl = 'https://lookup.binlist.net/';
 
     /**
      * BinListConnector constructor.
@@ -42,7 +44,7 @@ class BinListConnector
      */
     public function check($binNumber)
     {
-        $url = 'https://lookup.binlist.net/'.$binNumber;
+        $url = $this->baseUrl.$binNumber;
 
         return $this->request($url);
     }
