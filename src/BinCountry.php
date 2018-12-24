@@ -1,7 +1,9 @@
-<?php namespace DevinPearson\BinList;
+<?php
+
+namespace DevinPearson\BinList;
 
 /**
- *  BinCountry class
+ *  BinCountry class.
  *
  *  The card issuers country object
  *  provides the card issuers country location details
@@ -20,20 +22,21 @@ class BinCountry
     public $emoji = '';
     /** @var string the currency code the card is denominated in */
     public $currency = '';
-    /** @var int  the latitude of the issuing country */
+    /** @var int the latitude of the issuing country */
     public $latitude = '';
-    /** @var int    the longitude of the issuing country*/
+    /** @var int the longitude of the issuing country */
     public $longitude = '';
 
     /**
      * BinCountry constructor.
+     *
      * @param string $numeric
      * @param string $alpha2
      * @param string $name
      * @param string $emoji
      * @param string $currency
-     * @param int $latitude
-     * @param int $longitude
+     * @param int    $latitude
+     * @param int    $longitude
      */
     public function __construct($numeric, $alpha2, $name, $emoji, $currency, $latitude, $longitude)
     {

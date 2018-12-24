@@ -2,7 +2,6 @@
 
 namespace DevinPearson\BinList;
 
-use Illuminate\Contracts\Container\Container;
 use Illuminate\Support\ServiceProvider;
 
 /**

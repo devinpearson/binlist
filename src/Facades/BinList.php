@@ -1,4 +1,5 @@
 <?php
+
 namespace DevinPearson\BinList\Facades;
 
 use Illuminate\Support\Facades\Facade;
