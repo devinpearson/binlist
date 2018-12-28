@@ -1,4 +1,4 @@
-BinList Composer Library
+Wrapper for BinList.net
 =========================
 
 [![Latest Stable Version](https://poser.pugx.org/devinpearson/binlist/v/stable)](https://packagist.org/packages/devinpearson/binlist)
@@ -9,6 +9,7 @@ BinList Composer Library
 [![StyleCI](https://github.styleci.io/repos/162976694/shield?branch=master)](https://github.styleci.io/repos/162976694)
 [![Coverage Status](https://coveralls.io/repos/github/devinpearson/binlist/badge.svg?branch=master)](https://coveralls.io/github/devinpearson/binlist?branch=master)
 
+A simple wrapper for checking binlist codes via binlist.net and formats the results in to type hinted objects so it makes it easier to work and reference the results.
 
 Installing
 ==========
@@ -49,6 +50,6 @@ Features
 Requirements
 ============
 
-- PHP 7.0+
+- PHP 7.1+
 - PHPUnit is required to run the unit tests
 - Composer is required to run the unit tests
