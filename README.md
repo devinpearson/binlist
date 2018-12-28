@@ -7,7 +7,7 @@ Wrapper for BinList.net
 [![composer.lock](https://poser.pugx.org/devinpearson/binlist/composerlock)](https://packagist.org/packages/devinpearson/binlist)
 [![Build Status](https://travis-ci.org/devinpearson/binlist.svg?branch=master)](https://travis-ci.org/devinpearson/binlist)
 [![StyleCI](https://github.styleci.io/repos/162976694/shield?branch=master)](https://github.styleci.io/repos/162976694)
-[![Coverage Status](https://coveralls.io/repos/github/devinpearson/binlist/badge.svg?branch=master)](https://coveralls.io/github/devinpearson/binlist?branch=master)
+[![Code Coverage](https://scrutinizer-ci.com/g/devinpearson/binlist/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/devinpearson/binlist/?branch=master)
 
 A simple wrapper for checking binlist codes via binlist.net and formats the results in to type hinted objects so it makes it easier to work and reference the results.
 
