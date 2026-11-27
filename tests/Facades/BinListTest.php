@@ -21,7 +21,7 @@ class BinListTest extends AbstractTestCase
      *
      * @return string
      */
-    protected function getFacadeAccessor()
+    protected static function getFacadeAccessor(): string
     {
         return 'binlist';
     }
@@ -31,7 +31,7 @@ class BinListTest extends AbstractTestCase
      *
      * @return string
      */
-    protected function getFacadeClass()
+    protected static function getFacadeClass(): string
     {
         return BinListFacade::class;
     }
@@ -41,7 +41,7 @@ class BinListTest extends AbstractTestCase
      *
      * @return string
      */
-    protected function getFacadeRoot()
+    protected static function getFacadeRoot(): string
     {
         return BinList::class;
     }

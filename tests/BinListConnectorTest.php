@@ -58,7 +58,7 @@ class BinListConnectorTest extends TestCase
             $binList->check('1111111');
         } catch (BinListException $exception) {
             $this->assertInstanceOf(BinListException::class, $exception);
-            $this->assertContains(
+            $this->assertStringContainsString(
                 '400 Bad Request',
                 $exception->getMessage()
             );
@@ -75,7 +75,7 @@ class BinListConnectorTest extends TestCase
             $binList->check('52662718');
         } catch (BinListException $exception) {
             $this->assertInstanceOf(BinListException::class, $exception);
-            $this->assertContains(
+            $this->assertStringContainsString(
                 '500 Internal Server Error',
                 $exception->getMessage()
             );
