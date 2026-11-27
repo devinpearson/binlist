@@ -29,7 +29,7 @@ class BinListConnector
      *
      * @param Client|null $client
      */
-    public function __construct(Client $client = null)
+    public function __construct(?Client $client = null)
     {
         $this->client = $client;
         if (!$client instanceof Client) {
